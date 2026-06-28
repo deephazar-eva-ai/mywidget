@@ -1,0 +1,11 @@
+.drop-active{
+
+    outline:3px dashed #00ff88;
+
+    outline-offset:-8px;
+
+    background:rgba(0,255,136,.08);
+
+    transition:all .2s ease;
+
+}

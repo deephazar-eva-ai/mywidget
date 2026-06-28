@@ -90,4 +90,10 @@ export default class FloatingWindow {
             });
 
     }
+
+    contentElement() {
+
+        return this.content;
+
+    }
 }
