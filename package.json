@@ -1,0 +1,24 @@
+{
+    "name": "mywidget",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "description": "Floating Text Streamer Widget",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "keywords": [
+        "teleprompter",
+        "widget",
+        "streamer",
+        "pdf",
+        "text"
+    ],
+    "author": "Deepak H",
+    "license": "MIT",
+    "devDependencies": {
+        "vite": "^7.0.0"
+    }
+}
