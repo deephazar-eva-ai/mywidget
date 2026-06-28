@@ -1,37 +1,22 @@
 import "./styles/base.css";
+import "./styles/floating-window.css";
 
-import TextStreamer from "./TextStreamer.js";
+import FloatingWindow from "./components/FloatingWindow.js";
 
 window.addEventListener("DOMContentLoaded", () => {
 
-    const widget =
-        document.createElement("text-streamer");
+    const win = new FloatingWindow({
 
-    widget.setAttribute(
-        "src",
-        "/data/hanuman_chalisa.txt"
-    );
+        title: "Text Streamer"
 
-    widget.setAttribute(
-        "title",
-        "Hanuman Chalisa"
-    );
+    });
 
-    widget.setAttribute(
-        "speed",
-        "1200"
-    );
+    const content = document.createElement("div");
 
-    widget.setAttribute(
-        "loop",
-        ""
-    );
+    content.textContent = "Empty teleprompter";
 
-    widget.setAttribute(
-        "autoplay",
-        ""
-    );
+    win.setContent(content);
 
-    document.body.append(widget);
+    win.attach();
 
 });

@@ -1,0 +1,111 @@
+.floating-window{
+
+    position:fixed;
+
+    top:40px;
+    left:40px;
+
+    width:900px;
+    height:180px;
+
+    display:flex;
+    flex-direction:column;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    background:
+        rgba(30,30,30,.75);
+
+    backdrop-filter:blur(16px);
+
+    border:
+
+        1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+
+        0 15px 40px rgba(0,0,0,.4);
+
+    z-index:1000;
+
+}
+
+.floating-titlebar{
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 14px;
+
+    cursor:move;
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    border-bottom:
+
+        1px solid rgba(255,255,255,.08);
+
+}
+
+.floating-title{
+
+    font-weight:600;
+
+}
+
+.floating-buttons{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.window-btn{
+
+    width:28px;
+
+    height:28px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#2e2e2e;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.window-btn:hover{
+
+    background:#00b894;
+
+}
+
+.floating-content{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#00ff80;
+
+    font-size:28px;
+
+}
