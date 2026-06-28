@@ -1,4 +1,6 @@
 import EventEmitter from "./EventEmitter.js";
+import { LoaderFactory } from "../loaders/index.js";
+
 
 export default class StreamEngine extends EventEmitter {
 
@@ -26,19 +28,34 @@ export default class StreamEngine extends EventEmitter {
     ==================================================
     */
 
-    async load(url) {
+    // async load(url) {
 
-        const response = await fetch(url);
+    //     const response = await fetch(url);
 
-        if (!response.ok) {
+    //     if (!response.ok) {
 
-            throw new Error(`Unable to load ${url}`);
+    //         throw new Error(`Unable to load ${url}`);
 
-        }
+    //     }
 
-        const text = await response.text();
+    //     const text = await response.text();
 
-        this.loadText(text);
+    //     this.loadText(text);
+
+    // }
+
+
+    async load(source) {
+
+    const loader =
+        LoaderFactory.create(source);
+
+    this.lines =
+        await loader.load(source);
+
+    this.index = 0;
+
+    this.emitCurrent();
 
     }
 
@@ -210,7 +227,7 @@ export default class StreamEngine extends EventEmitter {
     }
     get isPlaying() {
         return this.playing;
-    }
+    }   
     /*
     ==================================================
     Helpers

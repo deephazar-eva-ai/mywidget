@@ -91,4 +91,6 @@ document.addEventListener("keydown", e => {
 
 });
 
+await engine.load("/data/hanuman_chalisa.txt");
+
 engine.play();
