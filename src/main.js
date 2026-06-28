@@ -1,13 +1,37 @@
-const app = document.getElementById("app");
+import "./styles/base.css";
 
-app.innerHTML = `
+import TextStreamer from "./TextStreamer.js";
 
-<h1>MyWidget</h1>
+window.addEventListener("DOMContentLoaded", () => {
 
-<p>
+    const widget =
+        document.createElement("text-streamer");
 
-Project successfully bootstrapped.
+    widget.setAttribute(
+        "src",
+        "/data/hanuman_chalisa.txt"
+    );
 
-</p>
+    widget.setAttribute(
+        "title",
+        "Hanuman Chalisa"
+    );
 
-`;
+    widget.setAttribute(
+        "speed",
+        "1200"
+    );
+
+    widget.setAttribute(
+        "loop",
+        ""
+    );
+
+    widget.setAttribute(
+        "autoplay",
+        ""
+    );
+
+    document.body.append(widget);
+
+});
