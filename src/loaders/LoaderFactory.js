@@ -1,4 +1,5 @@
 import TextLoader from "./TextLoader.js";
+import PdfLoader from "./PdfLoader.js";
 
 export default class LoaderFactory {
 
@@ -34,6 +35,25 @@ export default class LoaderFactory {
             return new TextLoader();
 
         }
+
+        if (typeof source === "string") {
+
+            if (source.toLowerCase().endsWith(".pdf")) {
+
+                return new PdfLoader();
+
+            }
+
+            if (source.toLowerCase().endsWith(".txt")) {
+
+                return new TextLoader();
+
+            }
+
+        }
+
+ 
+
 
         throw new Error(
             "Unable to determine loader."

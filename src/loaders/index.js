@@ -6,3 +6,6 @@ export { default as TextLoader }
 
 export { default as LoaderFactory }
     from "./LoaderFactory.js";
+
+export { default as PdfLoader } 
+    from "./PdfLoader.js";
